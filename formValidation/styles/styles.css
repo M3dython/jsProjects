@@ -12,7 +12,7 @@ body {
   display: flex;
   align-content: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 50vh;
   margin: 100px;
 }
 .container {
