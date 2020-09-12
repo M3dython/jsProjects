@@ -65,6 +65,13 @@ h3 {
   padding: 10px;
 }
 
+h3.entire-millionaires {
+  background-color: #fff0bf;
+  border: 1px solid var(--border-black);
+  border-radius: 5px;
+  font-size: 1.3rem;
+}
+
 .person {
   display: flex;
   justify-content: space-between;
