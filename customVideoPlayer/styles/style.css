@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+/* gets the font Questrial */
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 * {
   box-sizing: border-box;
@@ -6,7 +7,7 @@
 
 body {
   background-color: #666;
-  font-family: "Questrial", sans-serif;
+  font-family: 'Questrial', sans-serif;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -21,11 +22,13 @@ h1 {
 .screen {
   cursor: pointer;
   width: 50%;
+  /* background of the video player */
   background-color: #000 !important;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 .controls {
+  /* color of the controls */
   background: #333;
   color: #fff;
   border-bottom-left-radius: 10px;
@@ -39,32 +42,39 @@ h1 {
 
 .controls .btn {
   border: 0;
+  /* makes the background of the controls button transparent */
   background: transparent;
   cursor: pointer;
 }
 
+/* color of the button play */
 .controls .fa-play {
   color: #03da03;
 }
 
+/* color of the button stop */
 .controls .fa-stop {
   color: #ff0000;
 }
 
+/* color of the button pause; will be add with javascript */
 .controls .fa-pause {
   color: #fff;
 }
 
-.controls . timestamp {
+/* color of the timestamp */
+.controls .timestamp {
   color: #fff;
   font-weight: bold;
   margin-left: 10px;
 }
 
+/* remove the outline of the buttons when pressed */
 .btn:focus {
   outline: 0;
 }
 
+/* makes the screen and controls responsive to the size of the broswer: changes at 800px */
 @media (max-width: 800px) {
   .screen,
   .controls {

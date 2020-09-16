@@ -11,20 +11,27 @@
     />
     <link rel="stylesheet" href="./styles/progress.css" />
     <link rel="stylesheet" href="./styles/style.css" />
+
     <title>Custom Video Player</title>
   </head>
   <body>
     <h1>Custom Video Player</h1>
+    <!-- video tag from html -->
+    <!-- sets the post image over the video -->
+
     <video
       src="./videos/car.mp4"
       id="video"
       class="screen"
       poster="./images/poster.png"
     ></video>
+    <!-- division below the video with the controls -->
     <div class="controls">
+      <!-- buttons play and stop; 2x sets the size -->
       <button class="btn" id="play">
         <i class="fa fa-play fa-2x"></i></button
       ><button class="btn" id="stop"><i class="fa fa-stop fa-2x"></i></button>
+      <!-- styled by the css progress -->
       <input
         type="range"
         id="progress"
@@ -34,6 +41,7 @@
         step="0.1"
         value="0"
       />
+      <!-- span will change value with javascript -->
       <span class="timestamp" id="timestamp">00:00</span>
     </div>
 
