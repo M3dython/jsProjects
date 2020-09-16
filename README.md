@@ -1,2 +1,2 @@
 # jsProjects
-This repo goes all my Javascript projects
+On this repo goes all my Javascript projects
