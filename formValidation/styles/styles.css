@@ -1,79 +1,124 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+/* import font used Open Sans, if not successful there is an alternative */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* declaring variables on root, so it can be reach at any children element */
 :root {
   --sucess-color: #2ecc71;
   --error-color: #e74c3c;
+  --primary-color: #d8d9ba;
+  --secondary-color: #bbbad9;
 }
+
+/* account for any border and padding in the values specified for an element. if an element is set 100px, that 100px will include any border or padding added, the content-box will shrink to absorb the extra-width */
 * {
   box-sizing: border-box;
+  /* height 100% and min-height 100vh is used, so the background-image always fits the whole page */
+  min-height: 100%;
 }
+
 body {
-  background-color: antiquewhite;
-  font-family: "Open Sans", sans-serif;
+  /* var() calls the variables declared on root */
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  font-family: 'Open Sans', sans-serif;
+  /* display flex makes all body's children work as flex   */
   display: flex;
   align-content: center;
   justify-content: center;
-  min-height: 50vh;
+
+  height: 100%;
+  /* margin sets the form position 100px from all  body borders */
   margin: 100px;
 }
+
 .container {
-  background-color: white;
+  background-color: var(--secondary-color);
   border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  /* gives the width of the form */
   width: 400px;
-  height: 60%;
+  height: 100%;
 }
+
 h2 {
+  /* aligns text center */
   text-align: center;
+  /* top margin is 0; right and left margin is 0; bottom margin is 20px */
   margin: 0 0 20px;
 }
+
+/* 1st form inside the container */
 .form {
+  /* top and bottom paddin is 30px, left and right padding is 40px */
   padding: 30px 40px;
 }
+
+/* individual inputs inside the form */
 .form-control {
   margin-bottom: 10px;
   padding-bottom: 20px;
+  /* positioned relative to its normal position; top, right, bottom, and left properties can be set for those elements. other content will not be adjusted */
   position: relative;
 }
+
+/* Control the labels of the form */
 .form-control label {
   color: #777;
+  /* maked the content fit the entire width available */
   display: block;
   margin-bottom: 5px;
 }
+
+/* control the inputs of the form */
 .form-control input {
-  border: 2px solid #f0f0f0;
+  border: 2px solid #ffffff;
   border-radius: 4px;
   display: block;
   width: 100%;
   padding: 10px;
+  /* font size of the text inside input */
   font-size: 14px;
 }
+
+/* remove the outline of the input element, when it is on focus */
 .form-control input:focus {
   outline: 0;
   border-color: #777;
 }
+/* makes the border green when the form is successfully filled; will be add trough javascript */
 .form-control.sucess input {
   border-color: var(--sucess-color);
 }
+/* makes the border red when the form is not successfully filled; will be add trough javascript */
 .form-control.error input {
   border-color: var(--error-color);
 }
 
+/* hides the error message, and give it the color red */
 .form-control small {
   color: var(--error-color);
+  /* position is abolute to a relative positioned parent */
   position: absolute;
-  bottom: 0;
+  /* bottom: 0; */
   left: 0;
   visibility: hidden;
 }
+
+/* the error message is visible; will be added trough javascript */
 .form-control.error small {
   visibility: visible;
 }
+/* outline is not removed, so there will be a black border after clicked */
 .form button {
+  /* on hover, the  cursor will be displayed as a pointer */
   cursor: pointer;
-  background-color: turquoise;
-  border: 2px solid turquoise;
+  background-color: #d9bac9;
+  border: 2px solid #d9bac9;
   border-radius: 4px;
-  color: white;
+  color: #ffffff;
   display: block;
   font-size: 16px;
   padding: 10px;

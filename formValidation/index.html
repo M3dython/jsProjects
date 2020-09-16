@@ -7,27 +7,34 @@
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
+    <!-- This contain the entire form, the class is styled in CSS file -->
     <div class="container">
-      <!-- id js class CSS -->
+      <!-- The form inside the container -->
       <form action="form" id="form" class="form">
         <h2>Register with us:</h2>
+        <!-- First division with the username info, form-control used to control each division -->
         <div class="form-control">
           <label for="Username">Username</label>
           <input type="text" id="username" placeholder="Enter username" />
+          <!-- small has vibility hidden in css -->
           <small>Error message</small>
         </div>
+        <!-- Division with the email input -->
         <div class="form-control">
           <label for="email">Email</label>
           <input type="text" id="email" placeholder="Enter username" />
           <small>Error message</small>
         </div>
+        <!-- Division with the password input -->
         <div class="form-control">
           <label for="Password">Password</label>
           <input type="password" id="password" placeholder="Enter username" />
           <small>Error message</small>
         </div>
+        <!-- division with the Confirm password input -->
         <div class="form-control">
           <label for="password2">Confirm password</label>
+          <!-- ID must be different, so getElementById can get it properly  -->
           <input
             type="password"
             id="password2"
@@ -38,6 +45,7 @@
         <button>Submit</button>
       </form>
     </div>
+    <!-- Script must be at the end, so it will work after page loads -->
     <script src="./scripts/script.js"></script>
   </body>
 </html>
