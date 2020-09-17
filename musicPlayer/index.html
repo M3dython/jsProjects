@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <!-- Removes the favicon error -->
+    <link rel="shortcut icon" href="#" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-      crossorigin="anonymous"
     />
     <title>Music Player</title>
   </head>
@@ -22,9 +22,11 @@
           <div class="progress" id="progress"></div>
         </div>
       </div>
-      <audio src="./audios/bensound-happyrock.mp3" id="audio"></audio>
+
+      <audio src="./audios/cute.mp3" id="audio"></audio>
+
       <div class="img-container">
-        <img src="./images/happyrock.jpg" id="cover" alt="" />
+        <img src="./images/cute.jpg" id="cover" alt="music-cover" />
       </div>
       <div class="navigation">
         <button id="prev" class="action-btn">
@@ -38,6 +40,7 @@
         </button>
       </div>
     </div>
+
     <script src="./scripts/script.js"></script>
   </body>
 </html>
