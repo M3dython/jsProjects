@@ -21,7 +21,7 @@ function showError(input, message) {
   formControl.className = 'form-control error';
   // gives the constant small the constant form control with the output of the querySelector function, the function invokes the small variable (as a parameter)
   const small = formControl.querySelector('small');
-  // makes the innertext of the small constant equals the message parameter
+  // makes the innerText of the small constant equals the message parameter
   small.innerText = message;
 }
 
@@ -29,7 +29,7 @@ function showError(input, message) {
 function showSuccess(input) {
   //parent element get the node name of the parent element, it will be added to the form control, and change its class to success
   const formControl = input.parentElement;
-  formControl.className = 'form-control sucess';
+  formControl.className = 'form-control success';
 }
 
 // Check email is valid
@@ -48,7 +48,7 @@ function checkEmail(input) {
 // Check required fields
 //the input of the checkRequired function must be an array
 function checkRequired(inputArr) {
-  // for each element of the array, check the fuction with the input as parameter
+  // for each element of the array, check the function with the input as parameter
   inputArr.forEach(function (input) {
     //if the input is empty show that the field name is required to be filled
     if (input.value.trim() === '') {
@@ -59,7 +59,7 @@ function checkRequired(inputArr) {
   });
 }
 
-// Check input length
+// Check input string length
 // input, min and max will be this function parameter
 function checkLength(input, min, max) {
   if (input.value.length < min) {
@@ -84,7 +84,7 @@ function getFieldName(input) {
   return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 }
 
-// Check paswords match
+// Check passwords match
 
 function checkPasswordsMatch(input1, input2) {
   // if the value of the first is different of the value of the second show error
@@ -93,14 +93,14 @@ function checkPasswordsMatch(input1, input2) {
   }
 }
 
-// EVENT LINSTENERS
+// EVENT LISTENERS
 // the event parameter has different methods; prevent default wont let it work as default
 //after submit do the following functions
 form.addEventListener('submit', function (event) {
   event.preventDefault();
   //create the array checkRequired and gives the values from the html input
   checkRequired([username, email, password, password2]);
-  //call the function checking the min,max lenghts of the first parameter
+  //call the function checking the min,max length of the first parameter
   checkLength(username, 3, 15);
   checkLength(password, 6, 25);
   checkLength(password2, 6, 25);

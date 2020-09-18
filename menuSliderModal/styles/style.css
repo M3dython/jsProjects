@@ -1,17 +1,25 @@
+/* import the lato font from google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
+/* set universal variables for the css  */
 :root {
   --modal-duration: 1s;
   --primary-color: #22c1c3;
   --secondary-color: #fdbb2d;
 }
+
+/* makes the browser account for any border and padding in the value specified */
 * {
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Lato', sans-serif;
   margin: 0;
 }
+
+/* only <body> elements AND with the .show-nav class will have this proprieties */
+/* the show-nav class will be add with javascript, making the body translate and showing nav */
 body.show-nav {
   /* width of the nav */
   transform: translateX(200px);
@@ -27,10 +35,11 @@ nav {
   left: 0;
   width: 200px;
   height: 100vh;
+  /* z index makes the <nav> overlay other contents */
   z-index: 100;
   transform: translateX(-100%);
 }
-
+/* all tags INSIDE the <nav> with the log class will be selected "THE SPACE MATTERS" */
 nav .logo {
   padding: 30px 0;
   text-align: center;
@@ -43,23 +52,27 @@ nav .logo img {
 
 nav ul {
   padding: 0;
+  /* remove the style from <li> */
   list-style-type: none;
   margin: 0;
 }
+
 nav ul li {
   border-bottom: 2px solid rgba(200, 200, 200, 0.8);
   padding: 20px;
 }
+/* selects only the first tag of the type <li> */
 nav ul li:first-of-type {
   border-top: 2px solid rgba(200, 200, 200, 0.8);
 }
-
+/* if you hover your pointer in VScode it will show what are you selecting in CSS */
 nav ul li a {
   color: #fff;
   text-decoration: none;
 }
 
 nav ul li a:hover {
+  /* removes the style from <a> when hovering */
   text-decoration: underline;
 }
 
@@ -79,7 +92,7 @@ header h1 {
 header p {
   margin: 30px 0;
 }
-
+/* selects the input tag with the type oof submit */
 button,
 input[type='submit'] {
   background-color: var(--secondary-color);
@@ -90,7 +103,8 @@ input[type='submit'] {
   padding: 8px 12px;
   font-weight: bolder;
 }
-
+/* when the <button> is on focus remove the outline */
+/* :focus is called a selector reference */
 button:focus {
   outline: none;
 }
@@ -114,6 +128,7 @@ button:focus {
   width: 800px;
 }
 
+/* hides the modal, so when the <submit> is clicked, with javascript, add the class show-modal */
 .modal-container {
   background-color: rgba(200, 200, 200, 0.6);
   display: none;
@@ -123,7 +138,7 @@ button:focus {
   bottom: 0;
   left: 0;
 }
-
+/* display the modal trough javascript */
 .modal-container.show-modal {
   display: block;
 }
@@ -139,6 +154,7 @@ button:focus {
   transform: translate(-50%, -50%);
   max-width: 100%;
   width: 400px;
+  /* modal animation will be set in @keyframes and it will last the --modal-duration  seconds */
   animation-name: modalopen;
   animation-duration: var(--modal-duration);
 }

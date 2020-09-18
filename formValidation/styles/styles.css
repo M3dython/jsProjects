@@ -3,7 +3,7 @@
 
 /* declaring variables on root, so it can be reach at any children element */
 :root {
-  --sucess-color: #2ecc71;
+  --success-color: #2ecc71;
   --error-color: #e74c3c;
   --primary-color: #d8d9ba;
   --secondary-color: #bbbad9;
@@ -52,7 +52,7 @@ h2 {
 
 /* 1st form inside the container */
 .form {
-  /* top and bottom paddin is 30px, left and right padding is 40px */
+  /* top and bottom padding is 30px, left and right padding is 40px */
   padding: 30px 40px;
 }
 
@@ -67,7 +67,7 @@ h2 {
 /* Control the labels of the form */
 .form-control label {
   color: #777;
-  /* maked the content fit the entire width available */
+  /* make the content fit the entire width available */
   display: block;
   margin-bottom: 5px;
 }
@@ -89,8 +89,8 @@ h2 {
   border-color: #777;
 }
 /* makes the border green when the form is successfully filled; will be add trough javascript */
-.form-control.sucess input {
-  border-color: var(--sucess-color);
+.form-control.success input {
+  border-color: var(--success-color);
 }
 /* makes the border red when the form is not successfully filled; will be add trough javascript */
 .form-control.error input {
@@ -100,7 +100,7 @@ h2 {
 /* hides the error message, and give it the color red */
 .form-control small {
   color: var(--error-color);
-  /* position is abolute to a relative positioned parent */
+  /* position is absolute to a relative positioned parent */
   position: absolute;
   /* bottom: 0; */
   left: 0;

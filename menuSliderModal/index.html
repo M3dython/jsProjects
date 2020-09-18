@@ -5,21 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Landing Page</title>
     <link rel="stylesheet" href="./styles/style.css" />
+    <!-- Import the icons used -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-      crossorigin="anonymous"
-    />
+     />
+
+
   </head>
   <body>
+    <!-- Nav tag is html semantic for a navigator bar -->
     <nav>
       <div class="logo">
+        <!-- image is obtained from an random user generator API -->
         <img
           src="https://randomuser.me/api/portraits/women/71.jpg"
           alt="user"
         />
       </div>
+      <!-- The references of the list items leads nowhere, if href is changed could lead somewhere -->
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Portfolio</a></li>
@@ -27,6 +31,8 @@
         <li><a href="#">Contact me</a></li>
       </ul>
     </nav>
+
+    <!-- header is html5 semantic term for the header, work as a special div -->
     <header>
       <button class="toggle" id="toggle">
         <i class="fa fa-bars fa-2x"></i>
@@ -37,6 +43,7 @@
       </p>
       <button class="cta-btn" id="open">Sign up</button>
     </header>
+    <!-- container semantic is for elements with width set on the user's screen  -->
     <div class="container">
       <h2>What is this landing page about?</h2>
       <p>
@@ -68,20 +75,22 @@
       Veniam sit eaque nulla, deserunt sed expedita quod nisi exercitationem
       iusto laboriosam nobis quos, molestiae fuga. Ex!
     </div>
-
+      <!-- a modal displays content that temporaly blocks interactions with main view of a site -->
     <!-- Modal -->
     <div class="modal-container" id="modal">
       <div class="modal">
+        <!-- the buttons icons are get from a CDNJS -->
         <button class="close-btn" id="close">
           <i class="fa fa-times"></i>
         </button>
-
+        <!-- modal header semantic -->
         <div class="modal-header">
           <h3>Sign Up</h3>
         </div>
-
+        <!-- modal content  -->
         <div class="modal-content">
           <p>Register with us to get offers, support and more</p>
+
           <form class="modal-form">
 
             <div>
@@ -116,6 +125,7 @@
         </form>
         </div>
       </div>
+      <!-- script should be at the end of page, so it's loaded after the page is loaded, defer attribute could specifie that the script is executed when the page has finished parsing -->
       <script src="./scripts/script.js"></script>
     </body>
     </html>
