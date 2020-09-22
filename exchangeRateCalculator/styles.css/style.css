@@ -7,7 +7,14 @@
 }
 
 body {
-  background-color: #a6b6c7;
+  /* creates the circle radial image at the background  */
+  background: radial-gradient(
+    circle at 100%,
+    #229200,
+    #22f200 50%,
+    #fff200 75%,
+    #22f200 90%
+  );
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
@@ -20,67 +27,91 @@ body {
 h1 {
   color: var(--primary-color);
 }
+
 p {
   text-align: center;
 }
+
+h1,
+p {
+  /* adds a yellow shadow to the text, so it is more visible */
+  text-shadow: 1px 1px 1px #fff222;
+}
+
 .btn {
+  /* white color for button text */
   color: #ffd;
   background: var(--primary-color);
+  /* cursor will be a pointer when hovering */
   cursor: pointer;
   border-radius: 5px;
   font-size: 1.2rem;
   padding: 5px 12px;
 }
 
-.moneyImg {
+.money-img {
   width: 150px;
+  /* styling the image, so it is not a plain square */
+  border-radius: 30%;
 }
 
 .currency {
   padding: 40px 0;
   display: flex;
   align-items: center;
+  /* space between the items */
   justify-content: space-between;
 }
 
 .currency select {
   padding: 10px 20px 10px 20px;
+  /* removes the normal appearance of select */
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
   border: 1px solid #ffd;
   font-size: 1rem;
   background: transparent;
+  /* creates the down arrow on the selected item */
+  /* uses ans svg image */
   background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%20000002%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  /* positioning of the arrow */
   background-position: right 10px top 50%, 0, 0;
   background-size: 12px auto, 10%;
   background-repeat: no-repeat;
 }
+
 .currency input {
   border: 0;
+  /* makes the background of the input transparent */
   background: transparent;
   font-size: 30px;
+  /* the text will be aligned at the right  */
   text-align: right;
 }
 
-.swapRateContainer {
+/* class content is changed using the api to calculate the rate between the currencies in the javascript */
+.swap-rate-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .rate {
+  /* rate fetched from the API */
   color: var(--primary-color);
   font-size: 1.4rem;
   padding: 0 10px;
 }
 
+/* when on focus removes the outline */
 select:focus,
 input:focus,
 button:focus {
   outline: 0;
 }
 
+/* if the screen size is smaller, reduces the width of the currency input */
 @media (max-width: 600px) {
   .currency input {
     width: 200px;

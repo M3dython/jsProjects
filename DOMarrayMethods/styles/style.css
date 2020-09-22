@@ -1,16 +1,23 @@
+/* set the global variables for the colors used */
 :root {
   --border-black: #111111;
   --background-white: #fffff0;
 }
+
+/* allows to include the padding and border in an element total width and height  */
 * {
   box-sizing: border-box;
 }
 
 body {
-  background: #fff000;
+  background: linear-gradient(45deg, #000fff, #fff000);
+  /* font family should either be given quoted as strings or unquoted as a sequence of one or more identifiers */
+  /* at the start of each token must be escaped in unquoted font family names. "Goudy Bookletter 1911" is correct but Goudy Bookletter 1911 is wrong */
   font-family: Arial, Helvetica, sans-serif;
+  /* set the children in Flexible Box Layout Module, with direction as column */
   display: flex;
   flex-direction: column;
+  /* in Flexbox align-items control the alignment of items on the Cross Axis. In grid layout it controls the alignment of items on the block axis whithin grid area */
   align-items: center;
   min-height: 100vh;
   margin: 0;
@@ -20,36 +27,46 @@ body {
   display: flex;
   padding: 20px;
   margin: 0 auto;
+  /* set the max-width as 100% of its container */
   max-width: 100%;
   width: 800px;
 }
 
 aside {
   padding: 10px 20px;
+  /* takes 250px width from the 800px of the container div */
   width: 250px;
+  /* set the border only on the right site */
   border-right: 1px solid var(--border-black);
 }
-
+/* set the button styles */
 button {
+  /* colors are set using the variable on root */
   background-color: var(--background-white);
   border: 1px solid var(--border-black);
   border-radius: 5px;
+  /* the element fits its entire container width, adding a line break after the element. Inline block make it fit the parent element width, without adding a line break. */
   display: block;
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
+  /* font-weight sets how thick a character is  */
   font-weight: bold;
+  /* rem is a relative unit to the font-size of the root element, default is 16px */
   font-size: 1.2rem;
 }
 
 main {
+  /* the flex property is shorthand for flex-grow flex-shrink and flex-basis. the flex property sets the flexible length on the flexible items */
   flex: 1;
   padding: 10px 20px;
 }
 
 h2 {
+  /* black border only on the bottom of the header 2 */
   border-bottom: 1px solid var(--border-black);
   display: flex;
+  /* space between separate content with the maximum space between */
   justify-content: space-between;
   font-weight: 300;
   margin: 0 0 20px;
@@ -57,7 +74,7 @@ h2 {
 
 h3 {
   background-color: var(--background-white);
-  border-bottom: 1px solid var(--border-black);
+  /* border-bottom: 1px solid var(--border-black); */
   display: flex;
   justify-content: space-between;
   font-weight: 300;

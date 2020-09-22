@@ -33,11 +33,11 @@ function updatePlayIcon() {
 // Update progress & timestamp
 function updateProgress() {
   //get the value from the progress input and makes it proportional to the video current time in %
-  //javascript has the property video currentTime and duration
+  //javascript has the property video currentTime and video duration
   progress.value = (video.currentTime / video.duration) * 100;
 
   // Get minutes played with the currentTime property
-  // Math.floor rounds a rational number to the lowest closest interger
+  // Math.floor rounds a rational number to the lowest closest integer
   let mins = Math.floor(video.currentTime / 60);
   if (mins < 10) {
     mins = '0' + String(mins);
@@ -66,7 +66,7 @@ function stopVideo() {
 }
 
 // Event Listener
-//when click anywhere on the video, sets the function togglevideostatus
+//when click anywhere on the video, sets the function toggleVideoStatus
 video.addEventListener('click', toggleVideoStatus);
 // when click on the video change the icon to play if the video is paused --could implement the pause image--
 video.addEventListener('pause', updatePlayIcon);
