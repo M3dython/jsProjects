@@ -2,7 +2,7 @@ const btn = document.getElementById('btn');
 const color = document.querySelector('.color');
 
 //Functions
-//Ger random Hex Color
+//Get random Hex Color
 function randomHex() {
   var letters = '0123456789abcdef';
   var hexColor = '#';
@@ -14,8 +14,9 @@ function randomHex() {
 
 //change color displayed
 function changeColor() {
-  document.body.style.backgroundColor = randomHex();
-  color.textContent = randomHex();
+  var changedColor = randomHex();
+  document.body.style.backgroundColor = changedColor;
+  color.textContent = changedColor;
 }
 
 //Event Listeners

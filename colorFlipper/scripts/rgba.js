@@ -22,8 +22,9 @@ function randomRgbaColor() {
 
 //Change color
 function changeColor() {
-  document.body.style.backgroundColor = randomRgbaColor();
-  color.textContent = randomRgbaColor();
+  var changedColor = randomRgbaColor();
+  document.body.style.backgroundColor = changedColor;
+  color.textContent = changedColor;
 }
 
 //Event Listener
